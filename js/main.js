@@ -21,7 +21,7 @@ var questionTypes = {
     choose: function(option) {
       console.log("choose." + this._currentAction);
       // TODO check if option is valid
-      this.transition(option);
+      window.History.pushState({ state: option }, null, "?s=" + option);
     },
     _onEnter: function(s) {
       console.log("_onEnter." + this._currentAction);
@@ -55,6 +55,10 @@ var questionTypes = {
 var calcFsm = null;
 
 $(function() {
+  if (document.location.protocol === 'file:') {
+    alert('The HTML5 History API (and thus History.js) do not work on files, please upload it to a server.');
+  }
+
   calcFsm = new CalcFsm();
 
   _.each(questions.AR, function(q) {
@@ -62,5 +66,18 @@ $(function() {
     calcFsm.states[q._name] = _.extend(st, questionTypes[q._type]);
   });
 
-  calcFsm.handle("start");
+  var history = window.History;
+  history.Adapter.bind(window, 'statechange', function() {
+    var state = history.getState();
+    history.log('statechange: ', state.data, state.title, state.url);
+    history.log('calcFsm: transition to ' + JSON.stringify(state.data));
+    if ($.isEmptyObject(state.data)) {
+      calcFsm.transition('first');
+    } else {
+      calcFsm.transition(state.data.state);
+    }
+  });
+
+
+  calcFsm.handle('start');
 });
