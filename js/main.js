@@ -55,10 +55,6 @@ var questionTypes = {
 var calcFsm = null;
 
 $(function() {
-  if (document.location.protocol === 'file:') {
-    alert('The HTML5 History API (and thus History.js) do not work on files, please upload it to a server.');
-  }
-
   calcFsm = new CalcFsm();
 
   _.each(questions.AR, function(q) {
@@ -66,18 +62,27 @@ $(function() {
     calcFsm.states[q._name] = _.extend(st, questionTypes[q._type]);
   });
 
+  // Bind "statechange" for transitioning to a new state
+  // In other words, History.js _rules_ over the FSM.
   var history = window.History;
   history.Adapter.bind(window, 'statechange', function() {
     var state = history.getState();
     history.log('statechange: ', state.data, state.title, state.url);
-    history.log('calcFsm: transition to ' + JSON.stringify(state.data));
     if ($.isEmptyObject(state.data)) {
       calcFsm.transition('first');
     } else {
+      history.log('calcFsm: transition to ' + JSON.stringify(state.data));
       calcFsm.transition(state.data.state);
     }
   });
 
-
-  calcFsm.handle('start');
+  // Get current state from query params and transition if possible
+  var state = history.getState();
+  var params = $.parseParams(state.hash.slice(2, -1));
+  var s = params.s;
+  if (s && calcFsm.states.hasOwnProperty(s)) {
+    calcFsm.transition(s);
+  } else {
+    calcFsm.handle('start');
+  }
 });
