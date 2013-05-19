@@ -1,13 +1,13 @@
 var CalcFsm = machina.Fsm.extend({
   initialize: function() {
-    console.log("CalcFsm.initialize")
+    console.log('CalcFsm.initialize')
   },
 
   states: {
     uninitialized: {
       start: function() {
-        console.log("start." + this._currentAction);
-        this.transition("first");
+        console.log('start.' + this._currentAction);
+        this.transition('first');
       }
     }
   }
@@ -15,17 +15,16 @@ var CalcFsm = machina.Fsm.extend({
 
 var baseQuestionState = {
   initialize: function(payload) {
-    console.log("initialize." + this._currentAction);
+    console.log('initialize.' + this._currentAction);
   },
-  _container: $("#calc"),
+  _container: $('#calc'),
   _onEnter: function(s) {
-    console.log("_onEnter." + this._currentAction);
+    console.log('_onEnter.' + this._currentAction);
 
     var stateObj = this.states[this.state];
     var container = stateObj._container;
 
     container.hide();
-
     var body = _.template(stateObj._template, stateObj._templateData(stateObj));
     container.html(body)
 
@@ -34,14 +33,14 @@ var baseQuestionState = {
     container.fadeIn();
   },
   _onExit: function(s) {
-    console.log("_onExit." + this._currentAction);
+    console.log('_onExit.' + this._currentAction);
     this.states[this.state]._container.hide().html();
   }
 };
 
 var questionTypes = {
   choice: {
-    _template: $("#choice.template").html(),
+    _template: $('#choice.template').html(),
     _templateData: function(o) {
       return {
         title: o.title,
@@ -49,34 +48,34 @@ var questionTypes = {
       };
     },
     _bindEvents: function(fsm) {
-      this._container.find("a").click(function(e) {
+      this._container.find('a').click(function(e) {
         e.preventDefault();
-        fsm.handle("choose", $(this).data("state"));
+        fsm.handle('choose', $(this).data('state'));
       });
     },
     choose: function(option) {
-      console.log("choose." + this._currentAction);
+      console.log('choose.' + this._currentAction);
       // TODO check if option is valid
-      window.History.pushState({ state: option }, null, "?s=" + option);
+      window.History.pushState({ state: option }, null, '?s=' + option);
     },
   },
 
   year_input: {
-    _template: $("#year_input.template").html(),
+    _template: $('#year_input.template').html(),
     _templateData: function(o) {
       return {
         title: o.title
       };
     },
     _bindEvents: function(fsm) {
-      this._container.find("form").submit(function(e) {
+      this._container.find('form').submit(function(e) {
         e.preventDefault();
-        var value = $(this).find("input")[0].value;
-        fsm.handle("submit", value);
+        var value = $(this).find('input')[0].value;
+        fsm.handle('submit', value);
       });
     },
     submit: function(year) {
-      console.log("submit year: " + year);
+      console.log('submit year: ' + year);
     },
   }
 };
