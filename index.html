@@ -36,7 +36,7 @@
       <div class="span8">
         <h1>Calculadora de Dominio Público</h1>
 
-        <section id="calc" class="span4">
+        <section id="calc" class="span8">
         </section>
 
         <script id="choice" class="template" type="text/template">
@@ -46,6 +46,17 @@
               <li><a id="<%= o.name %>" data-state="<%= o.state %>" href=""><%= o.title %></a></li>
             <% }); %>
           </ul>
+        </script>
+
+        <script id="year_input" class="template" type="text/template">
+          <h3><%= title %></h3>
+          <form>
+            <fieldset>
+              <input type="text" placeholder="Año…">
+              <span class="help-block"></span>
+              <button type="submit" class="btn">Aceptar</button>
+            </fieldset>
+          </form>
         </script>
       </div>
     </div>

@@ -50,6 +50,38 @@ var questionTypes = {
       $("#calc").hide().html();
     }
   },
+
+  year_input: {
+    submit: function(year) {
+      console.log("submit year: " + year);
+    },
+    _onEnter: function(s) {
+      console.log("_onEnter." + this._currentAction);
+
+      var container = $("#calc")
+      container.hide();
+
+      var stateData = this.states[this.state];
+      var body = _.template($("#year_input.template").html(), {
+        title: stateData.title
+      });
+      container.html(body)
+
+      var fsm = this;
+      container.find("form").submit(function(e) {
+        e.preventDefault();
+        var value = $(this).find("input")[0].value;
+        fsm.handle("submit", value);
+      });
+
+      container.fadeIn();
+    },
+    _onExit: function(s) {
+      console.log("_onExit." + this._currentAction);
+
+      $("#calc").hide().html();
+    }
+  }
 };
 
 var calcFsm = null;

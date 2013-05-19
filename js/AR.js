@@ -142,5 +142,12 @@ questions.AR = [
         state: "musicalWorkNotFolklore"
       }
     ]
+  },
+
+  {
+    _name: "commonWorkOriginalNaturalPerson",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del autor",
+    func: ["greaterThan", 70, "commonWorkOriginalNaturalPersonPD", "commonWorkOriginalNaturalPersonNotPD"],
   }
 ];
