@@ -76,7 +76,48 @@ var questionTypes = {
     },
     submit: function(year) {
       console.log('submit year: ' + year);
+      // TODO check if year is valid
+      var o = this.states[this.state];
+      this.handle(o.func.name, year, o.func.args);
     },
+    greaterThan: function(year, args) {
+      var threshold  = args[0],
+          trueState  = args[1],
+          falseState = args[2];
+
+      var current = new Date();
+      var currentYear = current.getFullYear();
+
+      var newState = null;
+      if (currentYear - year > 70) {
+        console.log("Public Domain! :)");
+        newState = trueState;
+      } else {
+        console.log("NOT Public Domain! :(");
+        newState = falseState;
+      }
+      window.History.pushState({ state: newState }, null, '?s=' + newState);
+    }
+  },
+
+  pd: {
+    _template: $('#pd.template').html(),
+    _templateData: function(o) {
+      return {
+        explanation: o.explanation
+      };
+    },
+    _bindEvents: function(fsm) {},
+  },
+
+  npd: {
+    _template: $('#npd.template').html(),
+    _templateData: function(o) {
+      return {
+        explanation: o.explanation
+      };
+    },
+    _bindEvents: function(fsm) {},
   }
 };
 

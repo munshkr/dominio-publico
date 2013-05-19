@@ -148,6 +148,21 @@ questions.AR = [
     _name: "commonWorkOriginalNaturalPerson",
     _type: "year_input",
     title: "Ingrese la fecha de fallecimiento del autor",
-    func: ["greaterThan", 70, "commonWorkOriginalNaturalPersonPD", "commonWorkOriginalNaturalPersonNotPD"],
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkOriginalNaturalPersonPD", "commonWorkOriginalNaturalPersonNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalNaturalPersonPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalNaturalPersonNotPD",
+    _type: "npd",
+    explanation: "...",
   }
 ];
