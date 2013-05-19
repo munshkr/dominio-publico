@@ -157,13 +157,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalNaturalPersonPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "Las obras originales de autor entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor.</b>",
   },
 
   {
     _name: "commonWorkOriginalNaturalPersonNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "Las obras originales de autor entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor.</b>",
   },
 
   {
@@ -179,13 +179,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalInstitutionPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "Las obras originales que son propiedad de una persona jurídica o institución entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>.",
   },
 
   {
     _name: "commonWorkOriginalInstitutionNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "Las obras originales que son propiedad de una persona jurídica o institución entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>.",
   },
 
   {
@@ -201,13 +201,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalPseudonimAuthorRegisteredPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "Una vez que el autor registra titularidad sobre el pseudónimo, la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor.</b>",
   },
 
   {
     _name: "commonWorkOriginalPseudonimAuthorRegisteredNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "Una vez que el autor registra titularidad sobre el pseudónimo, la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor.</b>",
   },
 
   {
@@ -223,13 +223,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalPseudonimAuthorNotRegisteredPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "Si el autor no registra titularidad sobre el pseudónimo, <b>los derechos pertenecen al editor</b> y la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor.</b>",
   },
 
   {
     _name: "commonWorkOriginalPseudonimAuthorNotRegisteredNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "Si el autor no registra titularidad sobre el pseudónimo, <b>los derechos pertenecen al editor</b> y la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor.</b>",
   },
 
   {
@@ -245,13 +245,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalAnonymousInstitutionRegisteredPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "commonWorkOriginalAnonymousInstitutionRegisteredNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -267,13 +267,13 @@ questions.AR = [
   {
     _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -289,13 +289,13 @@ questions.AR = [
   {
     _name: "commonWorkDerivativePD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "commonWorkDerivativeNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -311,19 +311,19 @@ questions.AR = [
   {
     _name: "commonWorkColectivePD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "commonWorkColectiveNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "musicalWorkFolklore",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -339,13 +339,13 @@ questions.AR = [
   {
     _name: "musicalWorkNotFolklorePD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "musicalWorkNotFolkloreNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
 
@@ -362,13 +362,13 @@ questions.AR = [
   {
     _name: "radioWorkPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "radioWorkNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -384,13 +384,13 @@ questions.AR = [
   {
     _name: "photoWorkPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "photoWorkNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
@@ -406,19 +406,19 @@ questions.AR = [
   {
     _name: "cinemaWorkPD",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "cinemaWorkNotPD",
     _type: "npd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
   {
     _name: "newsWork",
     _type: "pd",
-    explanation: "...",
+    explanation: "<em>TO DO...</em>",
   },
 
 ];
