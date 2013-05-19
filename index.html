@@ -15,7 +15,7 @@
 <body>
   <div class="row">
     <div class="large-12 columns">
-      <h2>Calculadora de Dominio Público en Argentina</h2>
+      <a href="/"><h2>Calculadora de Dominio Público en Argentina</h2></a>
       <p>Verifique si una obra pertenece al dominio público en Argentina.</p>
       <hr />
     </div>
@@ -49,13 +49,19 @@
 
         <script id="pd" class="template" type="text/template">
           <h3>Es dominio público :)</h3>
+          <img class="left" src="img/pd.svg" width="100" alt="Dominio Público"/>
           <p><%= explanation %></p>
         </script>
 
         <script id="npd" class="template" type="text/template">
           <h3>No es dominio público :(</h3>
+          <img class="left" src="img/not-pd.svg" width="100" alt="Derechos Reservados"/>
           <p><%= explanation %></p>
         </script>
+      </div>
+
+      <div class="row">
+        <a href="/" class="small button">Comenzar de nuevo</a>
       </div>
     </div>
 
