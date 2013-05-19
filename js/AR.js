@@ -164,5 +164,261 @@ questions.AR = [
     _name: "commonWorkOriginalNaturalPersonNotPD",
     _type: "npd",
     explanation: "...",
-  }
+  },
+
+  {
+    _name: "commonWorkOriginalInstitution",
+    _type: "year_input",
+    title: "Ingrese la fecha de publicación de la obra",
+    func: {
+      name: "greaterThan",
+      args: [50, "commonWorkOriginalInstitutionPD", "commonWorkOriginalInstitutionNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalInstitutionPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalInstitutionNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorRegistered",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del autor",
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkOriginalPseudonimAuthorRegisteredPD", "commonWorkOriginalPseudonimAuthorRegisteredNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorRegisteredPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorRegisteredNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorNotRegistered",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del editor",
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkOriginalPseudonimAuthorNotRegisteredPD", "commonWorkOriginalPseudonimAuthorNotRegisteredNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorNotRegisteredPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalPseudonimAuthorNotRegisteredNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionRegistered",
+    _type: "year_input",
+    title: "Ingrese la fecha de publicación de la obra",
+    func: {
+      name: "greaterThan",
+      args: [50, "commonWorkOriginalAnonymousInstitutionRegisteredPD", "commonWorkOriginalAnonymousInstitutionRegisteredNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionRegisteredPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionRegisteredNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionNotRegistered",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del editor",
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkOriginalAnonymousInstitutionNotRegisteredPD", "commonWorkOriginalAnonymousInstitutionNotRegisteredNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkDerivative",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del traductor / adaptador",
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkDerivativePD", "commonWorkDerivativeNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkDerivativePD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkDerivativeNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkColective",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del último colaborador no anónimo",
+    func: {
+      name: "greaterThan",
+      args: [70, "commonWorkColectivePD", "commonWorkColectiveNotPD"]
+    }
+  },
+
+  {
+    _name: "commonWorkColectivePD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "commonWorkColectiveNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "musicalWorkFolklore",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "musicalWorkNotFolklore",
+    _type: "year_input",
+    title: "Ingrese la fecha de publicación de la obra",
+    func: {
+      name: "greaterThan",
+      args: [70, "musicalWorkNotFolklorePD", "musicalWorkNotFolkloreNotPD"]
+    }
+  },
+
+  {
+    _name: "musicalWorkNotFolklorePD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "musicalWorkNotFolkloreNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+
+  {
+    _name: "radioWork",
+    _type: "year_input",
+    title: "Ingrese la fecha de emisión",
+    func: {
+      name: "greaterThan",
+      args: [50, "radioWorkPD", "radioWorkNotPD"]
+    }
+  },
+
+  {
+    _name: "radioWorkPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "radioWorkNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "photoWork",
+    _type: "year_input",
+    title: "Ingrese la fecha de publicación de la obra",
+    func: {
+      name: "greaterThan",
+      args: [25, "photoWorkPD", "photoWorkNotPD"]
+    }
+  },
+
+  {
+    _name: "photoWorkPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "photoWorkNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "cinemaWork",
+    _type: "year_input",
+    title: "Ingrese la fecha de fallecimiento del último colaborador",
+    func: {
+      name: "greaterThan",
+      args: [50, "cinemaWorkPD", "cinemaWorkNotPD"]
+    }
+  },
+
+  {
+    _name: "cinemaWorkPD",
+    _type: "pd",
+    explanation: "...",
+  },
+
+  {
+    _name: "cinemaWorkNotPD",
+    _type: "npd",
+    explanation: "...",
+  },
+
+  {
+    _name: "newsWork",
+    _type: "pd",
+    explanation: "...",
+  },
+
 ];
