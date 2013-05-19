@@ -3,3 +3,11 @@ body {
   font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 */
+
+.pd-icon {
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1.25em;
+}
