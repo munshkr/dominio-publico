@@ -76,9 +76,17 @@ var questionTypes = {
     },
     submit: function(year) {
       console.log('submit year: ' + year);
-      // TODO check if year is valid
+      this.handle('validate', year);
+    },
+    validate: function(year) {
       var o = this.states[this.state];
-      this.handle(o.func.name, year, o.func.args);
+      var yearN = parseInt($.trim(year));
+      if (yearN > 1800 && yearN < 2100) {
+        this.handle(o.func.name, yearN, o.func.args);
+      } else {
+        o._container.find('input').addClass('error');
+        o._container.find('small.error').fadeIn('fast');
+      }
     },
     greaterThan: function(year, args) {
       var threshold  = args[0],
