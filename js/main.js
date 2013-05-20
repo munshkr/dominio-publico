@@ -73,6 +73,7 @@ var questionTypes = {
         var value = $(this).find('input')[0].value;
         fsm.handle('submit', value);
       });
+      this._container.find('input[autofocus]').focus();
     },
     submit: function(year) {
       console.log('submit year: ' + year);
