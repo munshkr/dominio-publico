@@ -158,12 +158,14 @@ questions.AR = [
     _name: "commonWorkOriginalNaturalPersonPD",
     _type: "pd",
     explanation: "Las obras originales de autor entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalNaturalPersonNotPD",
     _type: "npd",
     explanation: "Las obras originales de autor entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -180,12 +182,14 @@ questions.AR = [
     _name: "commonWorkOriginalInstitutionPD",
     _type: "pd",
     explanation: "Las obras originales que son propiedad de una persona jurídica o institución entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalInstitutionNotPD",
     _type: "npd",
     explanation: "Las obras originales que son propiedad de una persona jurídica o institución entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -202,12 +206,14 @@ questions.AR = [
     _name: "commonWorkOriginalPseudonimAuthorRegisteredPD",
     _type: "pd",
     explanation: "Una vez que el autor registra titularidad sobre el pseudónimo, la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalPseudonimAuthorRegisteredNotPD",
     _type: "npd",
     explanation: "Una vez que el autor registra titularidad sobre el pseudónimo, la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -224,12 +230,14 @@ questions.AR = [
     _name: "commonWorkOriginalPseudonimAuthorNotRegisteredPD",
     _type: "pd",
     explanation: "Si el autor no registra titularidad sobre el pseudónimo, <b>los derechos pertenecen al editor</b> y la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalPseudonimAuthorNotRegisteredNotPD",
     _type: "npd",
     explanation: "Si el autor no registra titularidad sobre el pseudónimo, <b>los derechos pertenecen al editor</b> y la obra original entra en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -246,12 +254,14 @@ questions.AR = [
     _name: "commonWorkOriginalAnonymousInstitutionRegisteredPD",
     _type: "pd",
     explanation: "Las obras originales anónimas pertenecientes a instituciones, corporaciones o personas jurídicas entran en dominio público <b>50 años contados a partir de la fecha de publicación</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalAnonymousInstitutionRegisteredNotPD",
     _type: "npd",
     explanation: "Las obras originales anónimas pertenecientes a instituciones, corporaciones o personas jurídicas entran en dominio público <b>50 años contados a partir de la fecha de publicación</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -268,12 +278,14 @@ questions.AR = [
     _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredPD",
     _type: "pd",
     explanation: "Las obras originales anónimas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkOriginalAnonymousInstitutionNotRegisteredNotPD",
     _type: "npd",
     explanation: "Las obras originales anónimas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del editor</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -290,12 +302,14 @@ questions.AR = [
     _name: "commonWorkDerivativePD",
     _type: "pd",
     explanation: "Las obras derivadas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del traductor / adaptador</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkDerivativeNotPD",
     _type: "npd",
     explanation: "Las obras derivadas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del traductor / adaptador</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -312,12 +326,14 @@ questions.AR = [
     _name: "commonWorkColectivePD",
     _type: "pd",
     explanation: "Las obras colectivas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "commonWorkColectiveNotPD",
     _type: "npd",
     explanation: "Las obras colectivas entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la muerte del autor</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -340,12 +356,14 @@ questions.AR = [
     _name: "musicalWorkNotFolklorePD",
     _type: "pd",
     explanation: "Los fonogramas e interpretaciones musicales entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>. Los titulares de estos derechos son los intérpretes y productores de fonogramas.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "musicalWorkNotFolkloreNotPD",
     _type: "npd",
     explanation: "Los fonogramas e interpretaciones musicales entran en dominio público <b>70 años contados a partir del 1º de enero del año siguiente a la fecha de publicación</b>. Los titulares de estos derechos son los intérpretes y productores de fonogramas.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
 
@@ -363,12 +381,14 @@ questions.AR = [
     _name: "radioWorkPD",
     _type: "pd",
     explanation: "Las obras de radiodifusión entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de emisión</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "radioWorkNotPD",
     _type: "npd",
     explanation: "Las obras de radiodifusión entran en dominio público <b>50 años contados a partir del 1º de enero del año siguiente a la fecha de emisión</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -385,12 +405,14 @@ questions.AR = [
     _name: "photoWorkPD",
     _type: "pd",
     explanation: "Las obras fotográficas entran en dominio público <b>25 años contados a partir de la fecha de publicación</b>.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "photoWorkNotPD",
     _type: "npd",
     explanation: "Las obras fotográficas entran en dominio público <b>25 años contados a partir de la fecha de publicación</b>.",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
@@ -407,12 +429,14 @@ questions.AR = [
     _name: "cinemaWorkPD",
     _type: "pd",
     explanation: "Para las obras cinematográficas, el derecho de propiedad es de <b>50 años a partir del fallecimiento del último colaborador</b>, considerando tal al autor del argumento, el productor y al director de la película.",
+    when: "La obra entró en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {
     _name: "cinemaWorkNotPD",
     _type: "npd",
-    explanation: "Para las obras cinematográficas, el derecho de propiedad es de <b>50 años a partir del fallecimiento del último colaborador</b>, considerando tal al autor del argumento, el productor y al director de la película.",
+    explanation: "Para las obras cinematográficas, el derecho de propiedad es de <b>50 años a partir del fallecimiento del último colaborador</b>, considerando tal al autor del argumento, el productor y al director de la película.</p><p>",
+    when: "La obra entrará en dominio público el <b>1º de enero de <%= dp_year %></b>.",
   },
 
   {

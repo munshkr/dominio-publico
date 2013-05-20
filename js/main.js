@@ -90,22 +90,23 @@ var questionTypes = {
       }
     },
     greaterThan: function(year, args) {
-      var threshold  = args[0],
-          trueState  = args[1],
-          falseState = args[2];
+      var rightsLength = args[0],
+          trueState    = args[1],
+          falseState   = args[2];
 
       var current = new Date();
       var currentYear = current.getFullYear();
+      var dpYear = year + 1 + rightsLength;
 
       var newState = null;
-      if (currentYear - year > 70) {
+      if (currentYear - dpYear >= 0) {
         console.log("Public Domain! :)");
         newState = trueState;
       } else {
         console.log("NOT Public Domain! :(");
         newState = falseState;
       }
-      window.History.pushState({ state: newState }, null, '?s=' + newState);
+      window.History.pushState({ state: newState, year: dpYear }, null, '?s=' + newState + '&y=' + dpYear);
     }
   },
 
@@ -117,6 +118,11 @@ var questionTypes = {
       };
     },
     _bindEvents: function(fsm) {},
+    setDPYear: function(year) {
+      var o = this.states[this.state];
+      var body = _.template(o.when, { dp_year: year });
+      o._container.find('.when').html(body).show();
+    },
   },
 
   npd: {
@@ -127,6 +133,11 @@ var questionTypes = {
       };
     },
     _bindEvents: function(fsm) {},
+    setDPYear: function(year) {
+      var o = this.states[this.state];
+      var body = _.template(o.when, { dp_year: year });
+      o._container.find('.when').html(body).show();
+    },
   }
 };
 
@@ -155,17 +166,20 @@ $(function() {
     } else {
       history.log('calcFsm: transition to ' + JSON.stringify(state.data));
       calcFsm.transition(state.data.state);
+      if (state.data.year) {
+        calcFsm.handle('setDPYear', state.data.year); }
     }
   });
 
   // Get current state from query params and transition if possible
   var state = history.getState();
   var params = $.parseParams(state.hash.substring(state.hash.indexOf('?') + 1));
-  var s = params.s;
 
   calcFsm.handle('start');
-  if (s && calcFsm.states.hasOwnProperty(s)) {
-    console.log('going to ' + s);
-    calcFsm.transition(s);
+  if (params.s && calcFsm.states.hasOwnProperty(params.s)) {
+    calcFsm.transition(params.s);
+    if (params.y) {
+      calcFsm.handle('setDPYear', params.y);
+    }
   }
 });
