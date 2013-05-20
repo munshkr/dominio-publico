@@ -151,11 +151,12 @@ $(function() {
 
   // Get current state from query params and transition if possible
   var state = history.getState();
-  var params = $.parseParams(state.hash.slice(2, -1));
+  var params = $.parseParams(state.hash.substring(state.hash.indexOf('?') + 1));
   var s = params.s;
+
+  calcFsm.handle('start');
   if (s && calcFsm.states.hasOwnProperty(s)) {
+    console.log('going to ' + s);
     calcFsm.transition(s);
-  } else {
-    calcFsm.handle('start');
   }
 });
