@@ -30,7 +30,7 @@ var baseQuestionState = {
 
     stateObj._bindEvents(this);
 
-    container.fadeIn();
+    container.fadeIn("fast");
   },
   _onExit: function(s) {
     console.log('_onExit.' + this._currentAction);
