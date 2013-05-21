@@ -1,8 +1,22 @@
-/*
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
 }
-*/
+p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 17px;
+}
+#calc p {
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, Verdana, sans-serif;
+}
+h1, h2, h3 { font-weight: 600; }
+h4, h5 { font-weight: 300; }
+
+.title { margin-bottom: 0; }
 
 ul {
   padding-left: 1.25em;
